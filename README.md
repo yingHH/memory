@@ -54,37 +54,37 @@ Layer 3: Project Memory (项目/.opencode/project-memory.json)
 
 ## Quick Start
 
-### View Memory
+**重要：** Memory Skill 通过自然语言触发，不是命令行工具。直接表达意图即可。
+
+### 查看记忆
 ```
-/memory              # Show all memory overview
-/memory global       # Show global preferences + experiences
-/memory project      # Show current project memory
+查看记忆
+显示当前记忆内容
 ```
 
-### Add Memory
+### 添加记忆
 ```
-/memory add 用户偏好使用简洁的回答风格
+加入记忆：我喜欢用 grep 搜索代码
+记住这个：遇到 asyncio 问题先检查嵌套
 ```
 
-Or trigger via conversation:
+或表达偏好时自动触发：
 ```
 我喜欢用 grep 搜索代码而不是 find
-# Agent will ask: 是否将此偏好加入记忆？
+# Agent 会询问：是否将此偏好加入记忆？
 ```
 
-### Update Memory
+### 更新记忆
 ```
 更新记忆
-# 或
-加入记忆
-# 或
+同步记忆
 记住这个
 ```
 
-### Project Management
+### 项目管理
 ```
-/project my-project    # Set current project
-/project status        # Show detection status
+切换项目 my-project
+当前项目状态
 ```
 
 ## Natural Language Triggers
@@ -93,9 +93,11 @@ Just express your intent naturally:
 
 | User says | Agent action |
 |-----------|--------------|
+| "查看记忆" / "显示记忆" | Show memory content |
 | "更新记忆" / "记住这个" | Direct extraction |
+| "加入记忆：xxx" | Add memory entry |
 | "我喜欢..." / "我偏好..." | Ask: Add to memory? |
-| "项目进展..." / "切换项目..." | Update project memory |
+| "切换项目 xxx" | Switch project |
 | "经验是..." / "教训是..." | Ask: Add experience? |
 
 ## Storage Locations
