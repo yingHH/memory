@@ -93,19 +93,30 @@ digraph trigger {
 }
 ```
 
-## Commands
+## Intent Trigger Phrases
 
-| Command | Description |
-|---------|-------------|
-| `/memory` | Show all memory overview |
-| `/memory global` | Show global preferences + experiences |
-| `/memory project` | Show current project memory |
-| `/memory add <content>` | Manually add memory entry |
-| `/memory delete <id>` | Delete specified entry |
-| `/memory search <keyword>` | Search memory content |
-| `/memory sync` | Force extraction from current conversation |
-| `/project <name>` | Set/switch current project |
-| `/project status` | Show project detection status |
+**说明：** 以下不是命令，而是意图表达方式。用户说这些话时，AI 应识别并执行相应操作。
+
+### 显式触发（直接执行）
+
+| 用户表达 | AI 操作 |
+|----------|---------|
+| "查看记忆" / "显示记忆" | 展示记忆概览 |
+| "更新记忆" / "同步记忆" | 执行记忆提取 |
+| "加入记忆：xxx" / "记住这个：xxx" | 添加记忆条目 |
+| "删除记忆 xxx" | 删除指定条目 |
+| "搜索记忆 xxx" | 搜索记忆内容 |
+| "切换项目 xxx" | 设置当前项目 |
+| "当前项目状态" | 显示项目识别状态 |
+
+### 隐式触发（确认后执行）
+
+| 用户表达 | AI 操作 |
+|----------|---------|
+| "我喜欢..." / "我偏好..." | 询问：是否加入记忆？ |
+| "经验是..." / "教训是..." | 询问：是否加入记忆？ |
+| "项目进展..." / "当前状态..." | 更新项目进度 |
+| "下一步计划..." | 更新项目下一步 |
 
 ## Extraction Process
 
@@ -129,7 +140,7 @@ When triggered, execute this flow:
 4. **Project identification:**
    - Priority: git repo root as project ID
    - Fallback: mark as "global-only"
-   - User can correct via `/project <name>`
+   - User can correct via "切换项目 xxx"
 
 ## Injection Process
 
@@ -170,7 +181,7 @@ At conversation start, inject memory into system prompt:
 ## Key Reminders
 
 - **Read before act:** Check memory at conversation start
-- **Sync after success:** Suggest `/memory sync` after complex tasks
+- **Sync after success:** Suggest "更新记忆" after complex tasks
 - **Project awareness:** Always identify current project
 - **Confidence matters:** Only inject high-confidence entries
 - **Deduplication:** Trim whitespace before comparing content
