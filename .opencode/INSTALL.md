@@ -43,54 +43,51 @@ Restart OpenCode. The plugin auto-installs and registers all skills.
 
 ## Verify Installation
 
-Ask OpenCode:
+告诉 OpenCode：
 ```
-告诉我关于记忆功能
+你有哪些技能
 ```
 
-Or check commands:
-```
-/memory
-```
+应该能看到 "memory" 在技能列表中。
 
 ## Usage
 
-### View Memory
+**重要：** Memory Skill 通过自然语言触发，不是命令行工具。直接表达意图即可。
+
+### 查看记忆
 ```
-/memory              # Show all memory overview
-/memory global       # Show global preferences + experiences
-/memory project      # Show current project memory
+查看记忆
+显示当前记忆内容
 ```
 
-### Add Memory
+### 添加记忆
 ```
-/memory add 用户偏好使用简洁的回答风格
+加入记忆：我喜欢用 grep 搜索代码
+记住这个：遇到 asyncio 问题先检查嵌套
 ```
 
-Or trigger via conversation:
+或表达偏好时自动触发：
 ```
 我喜欢用 grep 搜索代码而不是 find
-# Agent will ask: 是否将此偏好加入记忆？
+# Agent 会询问：是否将此偏好加入记忆？
 ```
 
-### Update Memory
+### 更新记忆
 ```
 更新记忆
-# 或
-加入记忆
-# 或
+同步记忆
 记住这个
 ```
 
-### Delete Memory
+### 删除记忆
 ```
-/memory delete <id>
+删除记忆条目 xxx
 ```
 
-### Project Management
+### 项目管理
 ```
-/project my-project    # Set current project
-/project status        # Show detection status
+切换项目 my-project
+当前项目状态
 ```
 
 ## Storage Locations
@@ -141,7 +138,7 @@ ln -s ~/.config/opencode/memory/skills/memory ~/.config/opencode/skills/memory
 
 ### Memory file not created
 
-Memory file is created on first `/memory add` or successful extraction.
+Memory file is created on first successful extraction or when you say "加入记忆".
 
 ## Getting Help
 
