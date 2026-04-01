@@ -4,7 +4,20 @@
 
 - [OpenCode.ai](https://opencode.ai) installed
 
-## Installation
+## AI Prompt Installation (Recommended)
+
+Tell your AI agent to install Memory Skill:
+
+```
+安装 memory skill: 在 ~/.config/opencode/opencode.json 的 plugin 数组中添加 "memory@git+https://github.com/yingHH/memory.git"，然后重启 OpenCode
+```
+
+Or in English:
+```
+Install memory skill: Add "memory@git+https://github.com/yingHH/memory.git" to the plugin array in ~/.config/opencode/opencode.json, then restart OpenCode
+```
+
+## Manual Installation
 
 Add memory skill to the `plugin` array in your `opencode.json`:
 
