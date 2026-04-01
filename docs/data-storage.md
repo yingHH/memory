@@ -52,7 +52,7 @@ Memory skill identifies projects using:
 
 2. **Current directory** - Fallback if not in git repo
 
-3. **Manual override** - User can set via `/project <name>`
+3. **Manual override** - User can set via "切换项目 xxx"
 
 ## Detection Logic
 
@@ -80,9 +80,9 @@ function getProjectMemoryPath(projectDir) {
 
 Files are created automatically when:
 
-- First `/memory add` command
 - First successful extraction
-- `/project <name>` command
+- User says "加入记忆" or "记住这个"
+- User sets project via "切换项目 xxx"
 
 ## Backup Recommendation
 
