@@ -1,0 +1,29 @@
+{
+  "name": "memory",
+  "version": "1.0.0",
+  "type": "module",
+  "main": ".opencode/plugins/memory.js",
+  "description": "A cross-platform memory system for coding agents",
+  "keywords": [
+    "opencode",
+    "openclaw",
+    "memory",
+    "skills",
+    "agent",
+    "ai"
+  ],
+  "author": "yingHH",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yingHH/memory.git"
+  },
+  "files": [
+    "skills/",
+    ".opencode/",
+    "docs/"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
