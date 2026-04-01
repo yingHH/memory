@@ -126,7 +126,7 @@ def detect_intent(message: str) -> tuple[str, bool]:
 
 ### After Extraction
 
-> 记忆已更新。可使用 `/memory` 查看当前记忆内容。
+> 记忆已更新。可以说"查看记忆"查看当前记忆内容。
 
 ### Project Switch
 
