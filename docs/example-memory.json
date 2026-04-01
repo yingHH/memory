@@ -1,0 +1,95 @@
+{
+  "version": "1.0",
+  "userPreferences": {
+    "toolHabits": [
+      {
+        "id": "pref-001",
+        "category": "search",
+        "content": "偏好使用 grep 搜索代码而非 find",
+        "confidence": 0.85,
+        "source": "explicit",
+        "createdAt": "2026-04-01T12:00:00Z"
+      },
+      {
+        "id": "pref-002",
+        "category": "editor",
+        "content": "习惯使用 vim 键绑定",
+        "confidence": 0.90,
+        "source": "explicit",
+        "createdAt": "2026-04-01T12:00:00Z"
+      }
+    ],
+    "thinkingPatterns": [
+      {
+        "id": "think-001",
+        "category": "debugging",
+        "content": "遇到 bug 时优先检查最近修改的代码",
+        "confidence": 0.88,
+        "source": "derived",
+        "createdAt": "2026-04-01T12:00:00Z"
+      },
+      {
+        "id": "think-002",
+        "category": "problem-solving",
+        "content": "复杂问题先分解为小步骤逐一解决",
+        "confidence": 0.85,
+        "source": "explicit",
+        "createdAt": "2026-04-01T12:00:00Z"
+      }
+    ],
+    "decisionPatterns": [
+      {
+        "id": "dec-001",
+        "category": "autonomy",
+        "content": "涉及 API key 等敏感信息时主动询问用户",
+        "confidence": 0.95,
+        "source": "explicit",
+        "createdAt": "2026-04-01T12:00:00Z"
+      },
+      {
+        "id": "dec-002",
+        "category": "risk",
+        "content": "涉及删除操作时先确认影响范围",
+        "confidence": 0.90,
+        "source": "derived",
+        "createdAt": "2026-04-01T12:00:00Z"
+      }
+    ],
+    "interactionStyle": {
+      "verbosity": "concise",
+      "codeComments": "minimal",
+      "explanations": "only_when_asked",
+      "language": "zh"
+    }
+  },
+  "experiences": [
+    {
+      "id": "exp-001",
+      "type": "lesson",
+      "context": "调试 Python asyncio 问题",
+      "insight": "嵌套 async 函数会导致 asyncio.run() 失败",
+      "derivedPreferenceId": "think-001",
+      "confidence": 0.82,
+      "createdAt": "2026-04-01T12:00:00Z"
+    },
+    {
+      "id": "exp-002",
+      "type": "success",
+      "context": "重构大型函数",
+      "insight": "拆分为小函数并保持单一职责原则使代码更易维护",
+      "confidence": 0.88,
+      "createdAt": "2026-04-01T12:00:00Z"
+    },
+    {
+      "id": "exp-003",
+      "type": "failure",
+      "context": "直接修改生产配置",
+      "insight": "修改配置前应先备份并确认影响范围",
+      "derivedPreferenceId": "dec-002",
+      "confidence": 0.85,
+      "createdAt": "2026-04-01T12:00:00Z"
+    }
+  ],
+  "currentProject": "memory",
+  "lastUpdated": "2026-04-01T12:00:00Z"
+}
