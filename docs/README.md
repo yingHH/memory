@@ -43,14 +43,16 @@ Layer 3: Project Memory (项目/.opencode/project-memory.json)
 }
 ```
 
-### Basic Commands
+### Usage
 
-| Command | Description |
-|---------|-------------|
-| `/memory` | View memory overview |
-| `/memory add <content>` | Manually add entry |
-| `/memory sync` | Force extraction |
-| `/project <name>` | Set current project |
+**重要：** Memory Skill 通过自然语言触发，直接表达意图即可。
+
+| 用户表达 | AI 操作 |
+|----------|---------|
+| "查看记忆" | 展示记忆概览 |
+| "加入记忆：xxx" | 添加记忆条目 |
+| "更新记忆" | 执行记忆提取 |
+| "切换项目 xxx" | 设置当前项目 |
 
 ### Natural Language Triggers
 
